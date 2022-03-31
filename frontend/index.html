@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/stylesheet.css">
+    <script src="https://kit.fontawesome.com/dd38ca02dc.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+
+</head>
+
+<body>
+    <!-- header with nav bar -->
+    <div class="container">
+        <!-- nav starts -->
+        <div class="side-nav">
+            <a href="#" class="logoo">
+                <img src="assets/images/icon-assetm.png" class="logoo-img">
+                <img src="assets/images/logo-icon.png" class="logo-icon">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#"><i class="fa-solid fa-house"></i>
+                        <p>Home</p>
+                    </a></li>
+                <li><a href="#"><i class="fa-solid fa-chart-bar"></i>
+                        <p>Charts</p>
+                    </a></li>
+                <li><a href="#"><i class="fa-solid fa-address-card"></i>
+                        <p>Profile</p>
+                    </a></li>
+                <li><a href="#"><i class="fa-solid fa-disease"></i>
+                        <p>Ideas</p>
+                    </a></li>
+                <li><a href="#"><i class="fa-solid fa-newspaper"></i>
+                        <p>News</p>
+                    </a></li>
+                <li><a href="#"><i class="fa-solid fa-gears"></i>
+                        <p>Settings</p>
+                    </a></li>
+
+                <li id="login-list"><a href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        <p>Login</p>
+                    </a></li>
+                <div class="active"></div>
+            </ul>
+        </div>
+        <!-- nav ends -->
+        <div class="row">
+            <div class="col">
+                <h1>Asset Tracker</h1>
+                <p>A way to track your assets and trading patterns using our simple to understand graphs, data, and
+                    charts with the information you
+                    insert regarding your assets and trading ideas
+                </p>
+                <button class="btn-reg" type="button">Explore</button>
+            </div>
+            <div class="col">
+                <div class="card">
+
+                </div>
+                <div class="card">
+
+                </div>
+                <div class="card">
+
+                </div>
+                <div class="card">
+
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- sign up/login page -->
+    <div class="container-form">
+        <div class="card-signup">
+            <div class="inner-box" id="card">
+                <div class="card-front">
+                    <h2>LOGIN</h2>
+                    <form>
+                        <input type="email" class="input-box" placeholder="Your Email" required>
+
+                        <input type="password" class="input-box" placeholder="Password" required>
+
+                        <button class="submit-btn" type="submit">Submit</button>
+                        <input type="checkbox"><span>Remember Me</span>
+
+                    </form>
+                    <button class="btn-input" type="button" onclick="openRegister()">I'm New Here</button>
+                    <a href="">Forgot Password</a>
+                </div>
+                <div class="card-back">
+                    <h2>REGISTER</h2>
+                    <form>
+                        <input type="text" class="input-box" placeholder="Your Name" required>
+
+                        <input type="email" class="input-box" placeholder="Your Email" required>
+
+                        <input type="password" class="input-box" placeholder="Password" required>
+
+                        <button class="submit-btn" type="submit">Submit</button>
+                        <input type="checkbox"><span>Remember Me</span>
+
+                    </form>
+                    <button class="btn-input" type="button" onclick="openLogin()">I Have an Account</button>
+                    <a href="">Forgot Password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-temp">
+        <form action="" class="search-bar">
+            <input class="input-search" type="text" placeholder="search assets" name="q">
+            <button id="search-btn" type="submit"><img class="magglass" src="assets/images/search.png"></button>
+        </form>
+    </div>
+
+    <div class="container-temp">
+
+
+        <!-- Bitcoin (BTC) Price Chart Widget -->
+        <div class="btcwdgt-chart">
+
+            <div class="btcwdgt-chart" bw-cash="true" bw-noshadow="true"></div>
+            
+        </div>
+
+
+    </div>
+    <!--Test Profile-->
+    <div class="container-temp">
+        <div class="mains">
+            <div class="cards9">
+                <div class="card9">
+                    <div class="card-content">
+                        <div class="number">$32600</div>
+                        <div class="card-name">Total USD</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                </div>
+                <div class="card9">
+                    <div class="card-content">
+                        <div class="number">$2900</div>
+                        <div class="card-name">Profit/Loss</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                </div>
+                <div class="card9">
+                    <div class="card-content">
+                        <div class="number">18</div>
+                        <div class="card-name">Total Trades</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                </div>
+
+                <div class="card9">
+                    <div class="card-content">
+                        <div class="number">4</div>
+                        <div class="card-name">Assets</div>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-users"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="charts">
+                <div class="chart">
+                    <h2>Earnings (past 12 months)</h2>
+                    <canvas id="lineChart"></canvas>
+                </div>
+                <div class="chart doughnut-chart">
+                    <h2>Holdings</h2>
+                    <canvas id="doughnut"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        (function(b,i,t,C,O,I,N) {
+          window.addEventListener('load',function() {
+            if(b.getElementById(C))return;
+            I=b.createElement(i),N=b.getElementsByTagName(i)[0];
+            I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
+          },false)
+        })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+
+    <script src="assets/script.js"></script>
+
+
+
+</body>
+
+</html>
